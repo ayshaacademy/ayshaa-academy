@@ -1,0 +1,681 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f8f3e7;
+    color: #173c32;
+    line-height: 1.6;
+}
+
+
+/* HEADER */
+
+.header {
+    background: #103c32;
+    color: white;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo > span {
+    font-size: 48px;
+    color: #d6a84f;
+}
+
+.logo h1 {
+    font-size: 28px;
+}
+
+.logo p {
+    color: #e8dcc4;
+    font-size: 13px;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d6a84f;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 600px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+    padding: 70px 20px;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 43, 35, 0.78);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border: 1px solid #d6a84f;
+    border-radius: 30px;
+
+    color: #f1cf7a;
+
+    margin-bottom: 25px;
+}
+
+.hero h2 {
+    font-size: 55px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h2 span {
+    color: #d6a84f;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+
+    font-size: 19px;
+    color: #eee4d2;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.primary {
+    background: #d6a84f;
+    color: #173c32;
+}
+
+.secondary {
+    border: 1px solid #d6a84f;
+    color: white;
+}
+
+
+/* FEATURES */
+
+.features {
+    max-width: 1100px;
+
+    margin: -55px auto 60px;
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    padding: 0 20px;
+}
+
+.feature {
+    background: white;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    margin-bottom: 8px;
+}
+
+
+/* GENERAL SECTIONS */
+
+.section,
+.about,
+.registration,
+.contact {
+    padding: 80px 20px;
+}
+
+.section-heading {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 45px;
+}
+
+.section-heading span {
+    color: #b7862f;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+
+    margin: 8px 0 12px;
+
+    color: #173c32;
+}
+
+
+/* COURSES */
+
+.course-grid {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.course-card {
+    background: white;
+
+    padding: 32px;
+
+    border-radius: 16px;
+
+    border-left: 5px solid #d6a84f;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.course-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.course-card h3 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+
+/* SCHEDULE */
+
+.schedule {
+    background: #eee5d3;
+}
+
+.schedule-grid {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.schedule-card {
+    background: white;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    border-top: 4px solid #d6a84f;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.schedule-icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.schedule-card h3 {
+    margin-bottom: 8px;
+    color: #173c32;
+}
+
+.schedule-card p {
+    color: #555;
+}
+
+
+/* FEES */
+
+.fees {
+    background: #f8f3e7;
+}
+
+.fees-grid {
+    max-width: 850px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.fee-card {
+    background: white;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    border-top: 5px solid #d6a84f;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+}
+
+.fee-icon {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.fee-card h3 {
+    color: #173c32;
+    margin-bottom: 12px;
+}
+
+.fee-price {
+    color: #b7862f;
+
+    font-size: 32px;
+
+    font-weight: bold;
+}
+
+.fee-card p {
+    color: #666;
+}
+
+
+/* ABOUT */
+
+.about {
+    background: #f8f3e7;
+}
+
+.about-box {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.about-box p {
+    margin-bottom: 20px;
+}
+
+.teacher {
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 12px;
+}
+
+.teacher strong,
+.teacher span {
+    display: block;
+}
+
+.teacher strong {
+    color: #b7862f;
+}
+
+
+/* REGISTRATION */
+
+.registration {
+    background: #103c32;
+    color: white;
+}
+
+.registration .section-heading h2 {
+    color: white;
+}
+
+.registration .section-heading p {
+    color: #ddd;
+}
+
+.registration-form {
+    max-width: 750px;
+
+    margin: auto;
+
+    background: white;
+
+    color: #173c32;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+input,
+select {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #d5cbb8;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+
+    background: #fffdf8;
+
+    color: #173c32;
+
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #d6a84f;
+}
+
+.submit-btn {
+    width: 100%;
+
+    border: none;
+
+    padding: 16px;
+
+    border-radius: 10px;
+
+    background: #d6a84f;
+
+    color: #173c32;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #c7983e;
+}
+
+.form-note {
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+/* CONTACT */
+
+.contact-card {
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.contact-card > div {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.contact-card span {
+    font-size: 28px;
+
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+.contact-card strong {
+    display: block;
+}
+
+.contact-card p {
+    color: #555;
+
+    word-break: break-word;
+}
+
+.contact-card a {
+    color: #173c32;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    color: #b7862f;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #092d26;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+footer h3 {
+    color: #d6a84f;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #ddd;
+
+    margin-bottom: 5px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 520px;
+    }
+
+    .hero h2 {
+        font-size: 39px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+
+        margin-top: -30px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fees-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .registration-form {
+        padding: 23px 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 31px;
+    }
+
+    .contact-card {
+        grid-template-columns: 1fr;
+    }
+
+}
