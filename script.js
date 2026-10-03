@@ -2,7 +2,6 @@ document.getElementById("registrationForm").addEventListener("submit", function(
 
     event.preventDefault();
 
-
     const name =
         document.getElementById("name").value;
 
@@ -11,12 +10,11 @@ document.getElementById("registrationForm").addEventListener("submit", function(
 
     const country =
         document.getElementById("country").value;
-
+const email =
+    document.getElementById("email").value;
+    
     const phone =
         document.getElementById("phone").value;
-
-    const email =
-        document.getElementById("email").value;
 
     const studentType =
         document.getElementById("studentType").value;
@@ -39,10 +37,9 @@ document.getElementById("registrationForm").addEventListener("submit", function(
         "Age: " + age + "\n" +
 
         "Country: " + country + "\n" +
+        "Email: " + email + "\n" +
 
         "WhatsApp: " + phone + "\n" +
-
-        "Email: " + email + "\n" +
 
         "Student: " + studentType + "\n" +
 
@@ -52,13 +49,15 @@ document.getElementById("registrationForm").addEventListener("submit", function(
 
         "CLASS DETAILS\n" +
 
-"🗓️ Class Days: Monday – Saturday\n" +
+        "🗓️ Class Days: Monday – Saturday\n" +
 
-"🕐 Class Time: 4:30 PM – 5:00 PM IST\n" +
+        "🕐 Class Time: 4:30 PM – 5:00 PM IST\n" +
 
-"💻 Platform: Google Meet\n" +
+        "💻 Platform: Google Meet\n" +
 
-"🌙 Weekly Holiday: Sunday\n\n" +
+        "🗣️ Class Language: Urdu\n" +
+
+        "🌙 Weekly Holiday: Sunday\n\n" +
 
         "FEES\n" +
 
@@ -69,20 +68,20 @@ document.getElementById("registrationForm").addEventListener("submit", function(
         "JazakAllahu Khairan.";
 
 
-    
-        const whatsappNumber =
-    "919335276518";
+    const whatsappNumber =
+        "919335276518";
 
 
     const whatsappURL =
-    "https://wa.me/" +
-    whatsappNumber +
-    "?text=" +
-    encodeURIComponent(message);
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message);
 
-window.open(
-    whatsappURL,
-    "_blank"
-);
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
 
 });
