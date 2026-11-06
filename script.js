@@ -1,87 +1,66 @@
-document.getElementById("registrationForm").addEventListener("submit", function(event) {
+const registrationForm = document.getElementById("registrationForm");
 
-    event.preventDefault();
+if (registrationForm) {
 
-    const name =
-        document.getElementById("name").value;
+    registrationForm.addEventListener("submit", function(event) {
 
-    const age =
-        document.getElementById("age").value;
+        event.preventDefault();
 
-    const country =
-        document.getElementById("country").value;
-const email =
-    document.getElementById("email").value;
-    
-    const phone =
-        document.getElementById("phone").value;
+        const name = document.getElementById("name").value.trim();
+        const age = document.getElementById("age").value;
+        const country = document.getElementById("country").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const studentType = document.getElementById("studentType").value;
+        const course = document.getElementById("course").value;
+        const timezone = document.getElementById("timezone").value.trim();
+        const language = document.getElementById("language").value;
+        const additionalMessage = document.getElementById("message").value.trim();
 
-    const studentType =
-        document.getElementById("studentType").value;
+        const message =
 
-    const course =
-        document.getElementById("course").value;
+            "Assalamu Alaikum Aysha Academy! 🌙\n\n" +
 
-    const timezone =
-        document.getElementById("timezone").value;
+            "NEW STUDENT REGISTRATION\n\n" +
 
+            "Name: " + name + "\n" +
+            "Age: " + age + "\n" +
+            "Country: " + country + "\n" +
+            "Email: " + email + "\n" +
+            "WhatsApp: " + phone + "\n" +
+            "Student: " + studentType + "\n" +
+            "Course: " + course + "\n" +
+            "Time Zone: " + timezone + "\n" +
+            "Preferred Language: " + language + "\n\n" +
 
-    const message =
+            "CLASS DETAILS\n" +
 
-        "Assalamu Alaikum Aysha Academy! 🌙\n\n" +
+            "Class Days: Monday – Saturday\n" +
+            "Class Time: 4:30 PM – 5:00 PM IST\n" +
+            "Platform: Google Meet\n" +
+            "Weekly Holiday: Sunday\n\n" +
 
-        "NEW REGISTRATION\n\n" +
+            "COURSE FEES\n" +
 
-        "Name: " + name + "\n" +
+            "India: ₹500 per month\n" +
+            "International: Affordable fee based on country\n\n" +
 
-        "Age: " + age + "\n" +
+            "Additional Message: " +
+            (additionalMessage || "None") + "\n\n" +
 
-        "Country: " + country + "\n" +
-        "Email: " + email + "\n" +
+            "JazakAllahu Khairan.\n" +
+            "Aysha Academy – LEARN • RECITE • GROW";
 
-        "WhatsApp: " + phone + "\n" +
+        const whatsappNumber = "919335276518";
 
-        "Student: " + studentType + "\n" +
+        const whatsappURL =
+            "https://wa.me/" +
+            whatsappNumber +
+            "?text=" +
+            encodeURIComponent(message);
 
-        "Course: " + course + "\n" +
+        window.open(whatsappURL, "_blank");
 
-        "Time Zone: " + timezone + "\n\n" +
+    });
 
-        "CLASS DETAILS\n" +
-
-        "🗓️ Class Days: Monday – Saturday\n" +
-
-        "🕐 Class Time: 4:30 PM – 5:00 PM IST\n" +
-
-        "💻 Platform: Google Meet\n" +
-
-        "🗣️ Class Language: Urdu\n" +
-
-        "🌙 Weekly Holiday: Sunday\n\n" +
-
-        "FEES\n" +
-
-        "🇮🇳 India: ₹500 per month\n" +
-
-        "🌍 International Students: Affordable fee based on country\n\n" +
-
-        "JazakAllahu Khairan.";
-
-
-    const whatsappNumber =
-        "919335276518";
-
-
-    const whatsappURL =
-        "https://wa.me/" +
-        whatsappNumber +
-        "?text=" +
-        encodeURIComponent(message);
-
-
-    window.open(
-        whatsappURL,
-        "_blank"
-    );
-
-});
+}
